@@ -1,0 +1,39 @@
+.table
+
+  &-row
+    display: flex
+
+    &:first-child .table-cell
+      border-top-width: 3px
+
+    .table-cell:first-child
+      border-left-width: 3px
+
+    &:nth-child(3n) .table-cell
+      border-bottom-width: 3px
+
+  &-cell
+    display: block
+    width: $cell-size
+    height: $cell-size
+    border: 1px solid grey
+    text-align: center
+    font: 20px Arial, sans-serif, sans normal
+    vertical-align: middle
+    margin-left: -1px
+    margin-bottom: -1px
+
+    &:nth-child(3n)
+      border-right-width: 3px
+
+    &.hover
+      background-color: $cell-hover
+
+    &.error
+      background-color: $cell-error
+
+    &.active
+      background-color: $cell-active
+
+    &.default
+      color: $cell-default
